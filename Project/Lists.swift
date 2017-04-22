@@ -16,6 +16,7 @@ class Lists: UIViewController {
 
         let nib = UINib(nibName: "ListsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListsCell")
+  
     }
     
     override func didReceiveMemoryWarning() {

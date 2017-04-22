@@ -49,11 +49,11 @@ extension CheingeData{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("SDASA1")
-        if segue.identifier == "seachController" {
-            let searchController: SearchController = SearchController()
-            searchController.someStr1 = "hbnjmk"
-            print("SDASA")
-        }
+//        if segue.identifier == "seachController" {
+//            let searchController: SearchController = SearchController()
+//            searchController.someStr1 = "hbnjmk"
+//            print("SDASA")
+//        }
     }
     
     
