@@ -412,7 +412,7 @@
                                 <state key="normal" title="Дополнительно"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L81-Y0-ewQ">
-                                <rect key="frame" x="48" y="179" width="661" height="100"/>
+                                <rect key="frame" x="48" y="189" width="661" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-de-oHy">
                                         <rect key="frame" x="45" y="11" width="158" height="38"/>
@@ -423,7 +423,7 @@
                                             <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" id="bx9-TR-ZHW"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="route" id="bx9-TR-ZHW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glR-l3-zci">
@@ -435,7 +435,7 @@
                                             <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" id="omC-Fc-phm"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="stop" id="omC-Fc-phm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4v-NT-5Li">
@@ -446,7 +446,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" id="rFM-9i-KEf"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="direction" id="rFM-9i-KEf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -467,7 +467,7 @@
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HF8-5U-0yh">
-                                <rect key="frame" x="166.5" y="234" width="42" height="42"/>
+                                <rect key="frame" x="166.5" y="244" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="J9p-YH-L8f"/>
                                     <constraint firstAttribute="width" constant="42" id="OQu-y3-4nZ"/>
@@ -476,7 +476,7 @@
                                 <color key="currentPageIndicatorTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Маршрут" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbq-tq-hNA">
-                                <rect key="frame" x="213" y="510" width="146" height="40"/>
+                                <rect key="frame" x="227" y="525" width="146" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -500,7 +500,7 @@
                             <constraint firstItem="Hjn-5S-5aF" firstAttribute="top" secondItem="D6D-L4-kyd" secondAttribute="bottom" id="loz-YB-aLe"/>
                             <constraint firstAttribute="trailing" secondItem="lLI-4t-2eT" secondAttribute="trailing" constant="50" id="pZp-vL-Xr7"/>
                             <constraint firstItem="D6D-L4-kyd" firstAttribute="leading" secondItem="7VB-cj-otg" secondAttribute="leading" id="q3W-Sx-0Vv"/>
-                            <constraint firstItem="L81-Y0-ewQ" firstAttribute="top" secondItem="lLI-4t-2eT" secondAttribute="bottom" constant="70" id="s9T-mZ-eei"/>
+                            <constraint firstItem="L81-Y0-ewQ" firstAttribute="top" secondItem="lLI-4t-2eT" secondAttribute="bottom" constant="80" id="s9T-mZ-eei"/>
                             <constraint firstItem="lLI-4t-2eT" firstAttribute="leading" secondItem="7VB-cj-otg" secondAttribute="leading" constant="50" id="t8W-wN-PaD"/>
                         </constraints>
                     </view>
@@ -519,8 +519,11 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="directionButton" destination="E4v-NT-5Li" id="DS9-kX-ya4"/>
                         <outlet property="mapView" destination="D6D-L4-kyd" id="eei-XX-NIf"/>
                         <outlet property="pageController" destination="HF8-5U-0yh" id="Se6-yl-fsm"/>
+                        <outlet property="routeButton" destination="iHe-de-oHy" id="6Qy-nZ-Sie"/>
+                        <outlet property="stopButton" destination="glR-l3-zci" id="dc7-fa-XzB"/>
                         <outlet property="transportSegment" destination="lLI-4t-2eT" id="LMu-Bd-ipu"/>
                         <outlet property="viewWithTextField" destination="L81-Y0-ewQ" id="Tq4-pC-r73"/>
                     </connections>
@@ -541,13 +544,17 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="PCw-ba-so7">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
                             <connections>
-                                <outlet property="delegate" destination="wEQ-60-gO8" id="qRx-dt-xKu"/>
+                                <outlet property="delegate" destination="wEQ-60-gO8" id="vwP-gZ-KZl"/>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="akS-sq-XZM" detailTextLabel="F6I-Ab-GXD" style="IBUITableViewCellStyleValue1" id="O4y-eZ-nza">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="akS-sq-XZM" style="IBUITableViewCellStyleDefault" id="O4y-eZ-nza">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O4y-eZ-nza" id="cFM-iU-Ypu">
@@ -555,14 +562,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="akS-sq-XZM">
-                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F6I-Ab-GXD">
-                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -578,21 +578,13 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchBar" destination="PCw-ba-so7" id="RMv-5w-KdN"/>
                         <outlet property="searchDisplayController" destination="Q6E-Mw-jgD" id="HHB-fS-272"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg8-Sh-i9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="0Z9-00-k9m">
-                    <connections>
-                        <outlet property="delegate" destination="wEQ-60-gO8" id="a4S-OE-ezF"/>
-                        <outlet property="searchBar" destination="PCw-ba-so7" id="bYk-UQ-IAt"/>
-                        <outlet property="searchContentsController" destination="wEQ-60-gO8" id="yVR-ww-Rh6"/>
-                        <outlet property="searchResultsDataSource" destination="wEQ-60-gO8" id="NCk-2f-Glv"/>
-                        <outlet property="searchResultsDelegate" destination="wEQ-60-gO8" id="oTH-4e-NMA"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4062" y="-696"/>
+            <point key="canvasLocation" x="4063" y="-696"/>
         </scene>
     </scenes>
     <resources>
@@ -602,6 +594,6 @@
         <image name="trolleybus32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rFM-9i-KEf"/>
+        <segue reference="bx9-TR-ZHW"/>
     </inferredMetricsTieBreakers>
 </document>
