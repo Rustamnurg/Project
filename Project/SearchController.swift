@@ -14,7 +14,7 @@ class SearchController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var selectedElementDelegate: Selectlement? = nil
-    var stage: String! = ""
+    var state: Int = 0
     var url: String! = ""
     let arr = ["dasd", "sdassa", "123", "sd1"]
     var filterdArr = [String]()
@@ -23,7 +23,7 @@ class SearchController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBarInit()
-        print(stage)
+    //    print(state)
         
         
     }
@@ -63,7 +63,7 @@ extension SearchController {
         else{
             name = arr[indexPath.row]
         }
-        selectedElementDelegate?.setElement(name: name, url: "url")
+        selectedElementDelegate?.setElement(name: name, url: "url", state: state)
         navigationController?.popViewController(animated: true)
         
     }
@@ -77,13 +77,13 @@ extension SearchController: UISearchBarDelegate{
     func searchBarInit(){
         searchBar.delegate = self
         var message = ""
-        switch stage {
+        switch state {
             
-        case SearchIdentifier.route.identifier:
+        case EventFlow.route.state:
             message = "номер маршрута"
-        case SearchIdentifier.direction.identifier:
+        case EventFlow.direction.state:
             message = "напраление"
-        case SearchIdentifier.stop.identifier:
+        case EventFlow.stop.state:
             message = "остановку"
         default:
             message = "?"
