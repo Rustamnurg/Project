@@ -34,6 +34,7 @@ class CreateObject: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         xBasicPosition = Int(viewWithTextField.frame.origin.x)
         
         routeButton.setTitle(EventFlow.route.defaultName, for: .normal)
@@ -75,6 +76,8 @@ class CreateObject: UIViewController {
         currentPosition = 0
         currentState = 1
         updataState(buttonLabel: EventFlow.route.defaultName, newState: EventFlow.transport.state + 1)
+        
+ 
         
     }
     
