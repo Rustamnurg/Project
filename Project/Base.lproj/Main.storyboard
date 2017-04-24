@@ -423,7 +423,7 @@
                                             <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" identifier="route" id="bx9-TR-ZHW"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="1" id="bx9-TR-ZHW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glR-l3-zci">
@@ -435,7 +435,7 @@
                                             <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" identifier="stop" id="omC-Fc-phm"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="3" id="omC-Fc-phm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4v-NT-5Li">
@@ -446,7 +446,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wEQ-60-gO8" kind="show" identifier="direction" id="rFM-9i-KEf"/>
+                                            <segue destination="wEQ-60-gO8" kind="show" identifier="2" id="rFM-9i-KEf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -465,6 +465,9 @@
                                     <segment title="" image="trolleybus32"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="chengeTransport:" destination="Xik-BF-f8s" eventType="valueChanged" id="nqe-Jx-tyd"/>
+                                </connections>
                             </segmentedControl>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HF8-5U-0yh">
                                 <rect key="frame" x="166.5" y="244" width="42" height="42"/>
@@ -475,13 +478,6 @@
                                 <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Маршрут" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbq-tq-hNA">
-                                <rect key="frame" x="227" y="525" width="146" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -594,6 +590,6 @@
         <image name="trolleybus32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bx9-TR-ZHW"/>
+        <segue reference="omC-Fc-phm"/>
     </inferredMetricsTieBreakers>
 </document>
